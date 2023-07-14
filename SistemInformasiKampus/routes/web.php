@@ -18,6 +18,7 @@ use App\Http\Controllers\MahasiswaController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/', function () {
     return view('index');
@@ -34,9 +35,15 @@ Route::get('/lecturer', function () {
 Route::get('/study_program', function () {
     return view('study_program');
 });
+Route::get('/signin', function () {
+    return view('signin');
+});
+Route::get('/signup', function () {
+    return view('signup');
+});
 
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+
 
 // Jurusan
 Route::get('/jurusan', [JurusanController::class, 'index'])->name('jurusan');
