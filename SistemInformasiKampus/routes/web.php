@@ -18,7 +18,7 @@ use App\Http\Controllers\MahasiswaController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/index', [HomeController::class, 'index'])->name('home');
 
 Route::get('/', function () {
     return view('index');
